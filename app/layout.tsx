@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
-import { Quicksand as FontSans } from 'next/font/google'
+import { Roboto as FontSans } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-import Footer from '@/components/footer'
+import { Footer } from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
 
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
+  weight: ['400', '700'],
 })
 
 export const metadata: Metadata = {
@@ -25,9 +26,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={cn('antialiased font-sans', fontSans.variable)}>
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-          <main className='min-h-screen bg-background font-sans '>
-            {children}
-          </main>
+          <main className='min-h-screen mx-auto'>{children}</main>
           <Footer />
           <TailwindIndicator />
         </ThemeProvider>

@@ -38,17 +38,14 @@ export function HomeNav() {
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className='grid gap-3 p-4 md:w-[400px] lg:w-[400px]'>
-                  <ListItem href='/movie' title='Movie'>
+                  <ListItem href='/movie' title='Trending'>
                     Explore Movie Marvels: Spectacles Await You!
                   </ListItem>
-                  <ListItem href='/tv' title='Tv Shows'>
+                  <ListItem href='/tv' title='Popular'>
                     Live on TV Shows: Addiction await ≥
                   </ListItem>
-                  <ListItem href='/drama' title='Drama'>
+                  <ListItem href='/drama' title='Upcoming'>
                     Indulge in Drama: Emotions Await!
-                  </ListItem>
-                  <ListItem href='/anime' title='Anime'>
-                    Dive into Anime Worlds: Adventures Await!
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
